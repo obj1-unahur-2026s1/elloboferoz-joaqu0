@@ -1,10 +1,17 @@
-object cazador{
-    var peso = 70
-    var nivelCalidez = 0
-    method calidez() = nivelCalidez
+import feroz.*
+object cazador {
+    
+    var calidez = 0
 
-    method enfrentarLobo(){
-        feroz.crisis()
-        nivelCalidez = nivelCalidez + 30
+    method peso() = 75
+    method calidezActual() = calidez
+
+    method aumentarCalidez(objeto) {
+        calidez = calidez + objeto.calidez()
+
+    }
+    method enfrentarLoboFeroz(){
+        feroz.recibeAtaqueFatal()
+        self.aumentarCalidez(feroz.soltarAbrigo())
     }
 }

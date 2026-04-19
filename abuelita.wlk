@@ -1,4 +1,5 @@
 object abuelita {
-    var peso = 50
-    method peso() = peso
+    
+    method peso() = 50
+
 }

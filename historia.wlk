@@ -1,51 +1,40 @@
+import feroz.*
+import caperucita.*
+import abuelita.*
+import cazador.*
 
 object historia {
+    method contarHistoria (){
+        //el lobo va corriendo hasata el bosque y se encuentra con caperuicita pero no pasa nada
+        feroz.correrHastaElBosque()
 
-    method comenzarHistoria () {
-        
-        /*
-        el lobo va corriendo al bosque y se encuentra con caperucita
-        */
+        //el lobo va hasta la casa de la abuela
+        feroz.irALaCasaDeLaAbuela()
 
-        feroz.irAlBosque()
-
-        /*
-        el lobo va a la casa de la abuelita
-        */
-
-        feroz.irACasaDeLaAbuelita()
-
-        /*
-        se come a la abuelita y se disfraza de ella
-        */
-
+        //el lobo se come a la abuela y se disfraza de ella
         feroz.comer(abuelita)
-        
-        /*
-        caperucita cruza el bosque y pierde una manzana
-        */
 
+        //caperucita cruza el bosque en camino hacia la cas de la abuela y se le cae una manzana del canasto
         caperucita.perderManzanas(1)
 
-        /*
-        el lobo se come a caperucita luego de que ella lo molestara con sus preguntas
-        */
-
+        //el lobo se molesta por las preguntas de caperucita y se la come
         feroz.comer(caperucita)
 
-        /*
-        aparece el cazador para eliminar el lobo y hacerse un abrigo con su piel
-        */
+    }
+}
 
-        cazador.enfrentarLobo()
-
+object finales {
+   
+    method finalEnfrentamiento(){
+        cazador.enfrentarLoboFeroz()
     }
 
-    method evaluarLoboFeroz() {
-        return {
-            "esta saludable el lobo feroz": feroz.esSaludable(),
-            "peso": feroz.peso()
-        }
-      
+    method finalElLoboComeAlCazador(){
+        feroz.comer(cazador)
+    }
+
+    method finalEscapeFeroz(){
+        feroz.pasarCrisis()
+        feroz.correr()
     }
 }
